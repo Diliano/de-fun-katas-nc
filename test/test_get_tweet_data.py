@@ -11,7 +11,7 @@ def test_returns_basic_dictionary_given_empty_tweet():
     }
     assert get_tweet_data(test_tweet) == expected
 
-def test_returns_correct_length():
+def test_calculates_length_property_and_updates_dict():
     test_tweet = "My awesome tweet"
     expected = { 
         "tags": [], 
@@ -22,7 +22,7 @@ def test_returns_correct_length():
     }
     assert get_tweet_data(test_tweet) ==  expected
 
-def test_returns_correct_mentions():
+def test_gathers_mention_data_and_updates_dict():
     test_tweet = "My awesome tweet to @northcoders"
     expected = { 
         "tags": [], 
@@ -33,7 +33,7 @@ def test_returns_correct_mentions():
     }
     assert get_tweet_data(test_tweet) == expected
 
-def test_returns_correct_tags():
+def test_gathers_tag_data_and_updates_dict():
     test_tweet = "My awesome tweet about #coding"
     expected = { 
         "tags": ["#coding"], 
@@ -44,7 +44,7 @@ def test_returns_correct_tags():
     }
     assert get_tweet_data(test_tweet) == expected
 
-def test_returns_correct_mentions_and_tags():
+def test_updates_tag_and_mention_data_in_dict():
     test_tweet = "My awesome tweet about #coding to @northcoders"
     expected = { 
         "tags": ["#coding"], 
