@@ -6,7 +6,7 @@ def test_returns_single_coin_given_input_with_a_coin_value():
     assert change_calculator(1) == {"1": 1}
     assert change_calculator(2) == {"2": 1}
 
-def test_returns_correct_combination_of_single_coins_required():
+def test_calculates_and_returns_combination_of_single_coins_required():
     assert change_calculator(7) == {"5": 1, "2": 1}
     assert change_calculator(13) == {"10": 1, "2": 1, "1": 1}
 
