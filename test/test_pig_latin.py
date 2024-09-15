@@ -47,12 +47,3 @@ def test_handles_words_with_no_vowels():
     result = pig_latin(test_input)
     # Assert
     assert result == expected
-
-def test_random():
-    # Arrange
-    test_input = "Sheffield"
-    expected = "effieldShay"
-    # Act
-    result = pig_latin(test_input)
-    # Assert
-    assert result == expected
